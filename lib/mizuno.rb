@@ -12,5 +12,6 @@ jars = File.join(File.dirname(__FILE__), 'java', '*.jar')
 Dir[jars].each { |j| require j }
 
 require 'rack'
+require 'mizuno/rack_handler'
 require 'mizuno/rack_servlet'
 require 'mizuno/http_server'

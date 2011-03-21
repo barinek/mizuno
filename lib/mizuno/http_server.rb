@@ -53,18 +53,11 @@ module Mizuno
             connector.setHost(options[:host])
             @server.addConnector(connector)
 
-            # Servlet context.
-            context = ServletContextHandler.new(nil, "/", 
-                ServletContextHandler::NO_SESSIONS)
-
-            # The servlet itself.
-            rack_servlet = RackServlet.new
-            rack_servlet.rackup(app)
-            holder = ServletHolder.new(rack_servlet)
-            context.addServlet(holder, "/")
+            rack_handler = RackHandler.new
+            rack_handler.rackup(app)
 
             # Add the context to the server and start.
-            @server.set_handler(context)
+            @server.set_handler(rack_handler)
             puts "Listening on #{connector.getHost}:#{connector.getPort}"
             @server.start
 

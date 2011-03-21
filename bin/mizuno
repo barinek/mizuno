@@ -2,8 +2,16 @@
 
 raise("Mizuno only runs on JRuby.") unless (RUBY_PLATFORM =~ /java/)
 
+require 'rubygems'
 require 'rack'
-require 'mizuno'
+
+begin
+  require 'mizuno'
+rescue LoadError
+  mizuno_path = File.expand_path('../../lib', __FILE__)
+  $:.unshift(mizuno_path)
+  require "mizuno"
+end
 
 server = Rack::Server.new
 server.options[:server] = 'mizuno'

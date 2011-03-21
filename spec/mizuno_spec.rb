@@ -136,7 +136,7 @@ describe Mizuno do
         response.body.should == '8da4b60a9bbe205d4d3699985470627e'
     end
 
-    it "handles async requests" do
+    xit "handles async requests" do
         lock = Mutex.new
         buffer = Array.new
 
