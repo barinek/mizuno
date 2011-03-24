@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
     spec.summary = 'Rack handler for Jetty 7 on JRuby.  Features multithreading, event-driven I/O, and async support.'
     spec.email = 'don@madwombat.com'
     spec.executables = [ "mizuno" ]
-    spec.files = %w( .gitignore
+    spec.files = %w(
         README.markdown
         LICENSE
         mizuno.gemspec
