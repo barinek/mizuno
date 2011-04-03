@@ -58,7 +58,7 @@ module Mizuno
 
       content_length = headers.delete('Content-Length')
 
-      response.setStatus(status)
+      response.setStatus(status.to_i)
       response.setContentLength(content_length.to_i) if content_length
       headers.each { |h, v| response.addHeader(h, v) }
 
