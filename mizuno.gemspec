@@ -3,12 +3,12 @@ Gem::Specification.new do |spec|
   spec.version = "0.4.0"
   spec.required_rubygems_version = Gem::Requirement.new(">= 1.2") \
         if spec.respond_to?(:required_rubygems_version=)
-  spec.authors = ["Don Werve"]
-  spec.description = 'Jetty-powered running shoes for JRuby/Rack.'
-  spec.summary = 'Rack handler for Jetty 7 on JRuby.  Features multithreading, event-driven I/O, and async support.'
-  spec.email = 'don@madwombat.com'
-  spec.executables = ["mizuno"]
-  spec.files = %w( .gitignore
+    spec.authors = [ "Don Werve" ]
+    spec.description = 'Jetty-powered running shoes for JRuby/Rack.'
+    spec.summary = 'Rack handler for Jetty 7 on JRuby.  Features multithreading, event-driven I/O, and async support.'
+    spec.email = 'don@madwombat.com'
+    spec.executables = [ "mizuno" ]
+    spec.files = %w(
         README.markdown
         LICENSE
         mizuno.gemspec
