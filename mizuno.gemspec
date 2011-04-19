@@ -28,7 +28,6 @@ Gem::Specification.new do |spec|
         lib/java/jetty-xml-7.3.0.v20110203.jar
         lib/java/logback-classic-0.9.28.jar
         lib/java/logback-core-0.9.28.jar
-        lib/java/mysql-connector-java-5.1.9.jar
         lib/java/servlet-api-2.5.jar
         lib/java/slf4j-api-1.6.1.jar
         lib/java/logback.xml

@@ -11,8 +11,6 @@ module Mizuno
     include_class 'java.lang.management.ManagementFactory'
     include_class 'javax.management.MBeanServer'
 
-    include_class 'com.mysql.jdbc.Driver'
-
     include_class 'org.slf4j.Logger'
     include_class 'org.slf4j.LoggerFactory'
 
