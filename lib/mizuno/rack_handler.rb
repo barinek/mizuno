@@ -9,13 +9,13 @@ module Mizuno
       @app = app
     end
 
-    def handle(target, baseRequest, request, response)
+    def handle(target, base_request, request, response)
       env = rack_env_from(request)
       env['rack.java.servlet'] = true
       env['rack.java.servlet.request'] = request
       env['rack.java.servlet.response'] = response
       populate_servlet_response(@app.call(env), response)
-      baseRequest.setHandled(true)
+      base_request.setHandled(true)
     end
 
     def rack_env_from(request)

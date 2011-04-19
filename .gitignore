@@ -4,6 +4,7 @@ Gemfile.lock
 pkg/*
 
 .rvmrc
+*target
+*vendor
 .idea
 *.iml
-data
